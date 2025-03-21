@@ -1,0 +1,101 @@
+$(document).ready(function(){
+	//Initialize Sticky Header
+	$("#nav-sticky").sticky({
+		className: "nav-stuck",
+		topSpacing: 0.01, //If header starts sticky with no transitions
+		bottomSpacing: 0,
+		zIndex: 1000
+	});
+	
+	//Initialize Animations
+	AOS.init({easing:"ease-in-out-sine"});
+
+	//Attach Fancybox to WYSIWYG Content
+	$(".html-content img").each(function(){
+		if (!$(this).parent().is("a")){
+			$(this).wrap("<a data-fancybox=images href='" + $(this).attr("src") + "'></a>");
+		}
+	});
+	
+	if (typeof SmoothScroll !== "undefined"){
+	//Initialize Smooth Scroll
+	SmoothScroll({
+		//Scrolling Core
+		animationTime    : 800, //ms
+		stepSize         : 60, //px
+
+		//Acceleration
+		accelerationDelta : 20,
+		accelerationMax   : 2,
+
+		//Keyboard Settings
+		keyboardSupport   : true,
+		arrowScroll       : 50, //px
+
+		//Pulse (less tweakable) - Ratio of "tail" to "acceleration"
+		pulseAlgorithm   : true,
+		pulseScale       : 4,
+		pulseNormalize   : 1,
+
+		//Other
+		touchpadSupport   : false, //Ignore touchpad by default
+		fixedBackground   : true, 
+		excluded          : ""
+	});
+	}
+});
+
+//Update Sticky Header
+$(window).on("load",function(){
+	$("#nav-sticky").sticky("update");
+});
+$(window).resize(function() {
+	$("#nav-sticky").sticky("update");
+});
+
+//Update sliders inside tabs on tabs show
+$("a[data-toggle=tab]").on("shown.bs.tab", function(e){
+	for (const [key, value] of Object.entries(swiperInstances)){
+		swiperInstances[key].update();
+	}
+});
+$(".nav li:first-child a[data-toggle=tab]").trigger("click");
+
+$(".container.inner").filter(function(){
+	return $.trim($(this).text()) === ""
+}).remove();
+
+
+
+
+
+
+
+
+
+    (function($, window) {
+        var adjustAnchor = function() {
+
+            var $anchor = $(':target'),
+                    fixedElementHeight = $("#nav-sticky-sticky-wrapper").height();
+
+            if ($anchor.length > 0) {
+				
+
+				$('html, body')
+     .stop()
+     .animate({
+         scrollTop: $anchor.offset().top - fixedElementHeight
+     }, 400);
+	 
+                //window.scrollTo(0, $anchor.offset().top - fixedElementHeight);
+
+            }
+
+        };
+
+        $(window).on('hashchange load', function() {
+            adjustAnchor();
+        });
+
+    })(jQuery, window);
