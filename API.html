@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Call from HTML</title>
+</head>
+<body>
+    <h1>Search Query</h1>
+    <input type="text" id="query" placeholder="Enter your search query">
+    <button onclick="searchAPI()">Search</button>
+    <pre id="result"></pre>
+
+    <script>
+        async function searchAPI() {
+            const query = document.getElementById("query").value;
+            const token = "....."; // Replace with the token from 'gcloud auth print-access-token'
+            const url = "https://discoveryengine.googleapis.com/v1alpha/projects/1028949821838/locations/global/collections/default_collection/engines/accd-search-app_1741300604073/servingConfigs/default_search:search";
+            const payload = {
+                query: query,
+                pageSize: 10,
+                queryExpansionSpec: { condition: "AUTO" },
+                spellCorrectionSpec: { mode: "AUTO" },
+                contentSearchSpec: { snippetSpec: { returnSnippet: true } },
+                session: "projects/1028949821838/locations/global/collections/default_collection/engines/accd-search-app_1741300604073/sessions/-"
+            };
+
+            try {
+                const response = await fetch(url, {
+                    method: "POST",
+                    headers: {
+                        "Authorization": `Bearer ${token}`,
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(payload)
+                });
+
+                const data = await response.json();
+                document.getElementById("result").textContent = JSON.stringify(data, null, 2);
+            } catch (error) {
+                console.error("Error fetching data:", error);
+                document.getElementById("result").textContent = "Failed to fetch data.";
+            }
+        }
+    </script>
+</body>
+</html>
