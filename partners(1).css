@@ -1,0 +1,117 @@
+.module_partners {
+	display: block;
+	width: 100%;
+	overflow: hidden;
+}
+
+.module_partners * {
+	animation-delay: 0.25s;
+}
+
+.module_partners .partner_block {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 5px;
+	height: 120px;
+	width: calc(100% - 20px);
+	color: #606060 !important;
+	margin: 10px;
+}
+
+.module_partners .partner_block img {
+	width: auto;
+	max-width: 100%;
+	max-height: 70px;
+}
+
+.partner_block.large {
+	height: 200px;
+}
+
+.partner_block.large img {
+	max-height: 150px;
+}
+
+.module_partners .partner_block b {
+	display: block;
+	width: 100%;
+	margin-top:	10px;
+	text-align: center;
+}
+
+/* Swiper */
+
+.module_partners .swiper-container {
+	margin-top: -10px;
+	width: calc(100% - 40px);
+}
+
+.module_partners .swiper-button-prev, .module_partners .swiper-button-next {
+	background-image: none !important;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 30px;
+	height: 30px;
+	transform: translateY(-50%);
+	margin-top: 0;
+}
+
+.module_partners .swiper-button-next {
+	right: -10px;
+	left: auto;
+}
+
+.module_partners .swiper-button-prev {
+	right: auto;
+	left: -10px;
+}
+
+.module_partners .swiper-button-next:lang(ar) {
+	right: auto;
+	left: -10px;
+}
+
+.module_partners .swiper-button-prev:lang(ar) {
+	right: -10px;
+	left: auto;
+}
+
+.module_partners .swiper-button-next:after {
+	font-family: "Font Awesome 5 Pro";
+	content: "\f105";
+	font-size: 30px;
+	display: block;
+}
+
+.module_partners .swiper-button-prev:after {
+	font-family: "Font Awesome 5 Pro";
+	content: "\f104";
+	font-size: 30px;
+	display: block;
+}
+
+.module_partners .swiper-button-next:lang(ar):after {
+	content: "\f104";
+}
+
+.module_partners .swiper-button-prev:lang(ar):after {
+	content: "\f105";
+}
+
+.module_partners .swiper-pagination {
+	position: relative;
+	display: block;
+	width: 100%;
+	margin: 0 !important;
+}
+
+.module_partners .swiper-pagination-bullet {
+	margin: 0 2px 0 2px;
+}
+
+.module_partners .swiper-pagination-bullet-active {
+	background: #436d93 !important;
+}
