@@ -1,0 +1,37 @@
+.block_laptop {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+	text-align: center;
+	position: relative;
+}
+
+.block_laptop .laptop_container {
+	position: relative;
+}
+
+.block_laptop .laptop_container .website {
+	position: absolute;
+	top: 6%;
+	left: 10%;
+	width: 80%;
+	height: 78%;
+	border-radius: 3px;
+}
+
+.block_laptop div.content {
+	text-align: center;
+	margin-top: 10px;
+}
+
+.block_laptop div.content b {
+	display: block;
+	width: 100%;
+	color: #014993;
+}
+
+.block_laptop div.content span {
+	color: #808080;
+}

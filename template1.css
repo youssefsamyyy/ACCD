@@ -1,0 +1,113 @@
+@media screen and (min-width: 992px) {
+	.tabs1 {
+		display: flex;
+		align-items: flex-start;
+	}
+	.tabs1 ul.nav {
+		display: flex;
+		flex-direction: column;
+		padding: 0;
+		width: 220px;
+		min-width: 220x;
+		position: relative;
+	}
+	.tabs1 ul.nav:after {
+		position: absolute;
+		left: 30px;
+		top: 20px;
+		bottom: 20px;
+		content: "";
+		width: 5px;
+		height: calc(100% - 40px);
+		background: #095197;
+		border-radius: 100px;
+	}
+	.tabs1:lang(ar) ul.nav:after {
+		left: initial;
+		right: 30px;
+	}
+	.tabs1 ul.nav li {
+		float: initial;
+		width: 100%;
+		margin: 0 10px 0 0;
+	}
+	.tabs1:lang(ar) ul.nav li {
+		margin: 0 0 0 10px;
+	}
+	.tabs1 ul.nav li:last-child {
+		margin: 0;
+	}
+	.tabs1 ul.nav li a {
+		display: flex;
+		align-items: center;
+		font-size: 16px;
+		color: #909090 !important;
+		background: transparent !important;
+		border-radius: 0;
+	}
+	.tabs1 ul.nav li a div {
+		min-width: 35px;
+		margin: 0 10px 0 0;
+	}
+	.tabs1:lang(ar) ul.nav li a div {
+		margin: 0 0 0 10px;
+	}
+	.tabs1 ul.nav li a span {
+		width: 25px;
+		height: 25px;
+		border-radius: 50%;
+		background: #095197;
+		color: white;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 14px;
+		margin: 0 auto 0 auto;
+		transition: transform 0.3s;
+	}
+	.tabs1 ul.nav li.active a span {
+		transform: scale(1.2);
+	}
+	.tabs1 ul.nav li.active a {
+		font-weight: bold;
+		color: #095197 !important;
+	}
+	.tabs1 .tab-content {
+		width: calc(100% - 200px);
+	}
+}
+
+@media screen and (max-width: 992px) {
+	.tabs1 ul.nav {
+		display: flex;
+		flex-wrap: wrap;
+		padding: 0;
+		margin: -5px;
+		width: calc(100% + 10px);
+	}
+	.tabs1 ul.nav li {
+		float: initial;
+		margin: 5px;
+	}
+	.tabs1 ul.nav li a {
+		display: flex;
+		align-items: center;
+		background: transparent !important;
+		border-radius: 0;
+		font-size: 16px;
+		padding: 10px 5px 10px 5px;
+		color: #aaa !important;
+		border-bottom: 5px solid #eee;
+	}
+	.tabs1 ul.nav li.active a {
+		color: #095197 !important;
+		border-bottom: 5px solid #095197;
+	}
+	.tabs1 ul.nav li a i {
+		font-size: 20px;
+		margin: 0 10px 0 0;
+	}
+	.tabs1:lang(ar) ul.nav li a i {
+		margin: 0 0 0 10px;
+	}
+}

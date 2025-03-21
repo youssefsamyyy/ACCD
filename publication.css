@@ -1,0 +1,115 @@
+.block_publication {
+	display: block;
+	padding: 15px 0 15px 0;
+}
+
+.block_publication .book-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	perspective: 600px;
+}
+
+@keyframes initAnimation {
+	0% {
+		transform: rotateY(0deg);
+	}
+	100% {
+		transform: rotateY(-30deg);
+	}
+}
+
+@keyframes initAnimationRTL {
+	0% {
+		transform: rotateY(0deg);
+	}
+	100% {
+		transform: rotateY(30deg);
+	}
+}
+
+.block_publication .book {
+	width: 150px;
+	height: 200px;
+	position: relative;
+	transform-style: preserve-3d;
+	transform: rotateY(-30deg);
+	transition: 1s ease;
+	animation: 1s ease 0s 1 initAnimation;
+}
+
+.block_publication:lang(ar) .book {
+	transform: rotateY(30deg);
+	animation: 1s ease 0s 1 initAnimationRTL;
+}
+
+.block_publication .book-container:hover .book,
+.block_publication .book-container:focus .book {
+	transform: rotateY(0deg);
+}
+
+.block_publication .book> :first-child {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: red;
+	width: 150px;
+	height: 200px;
+	transform: translateZ(15px);
+	background-color: #aaa;
+	border-radius: 0 2px 2px 0;
+	box-shadow: 2px 2px 10px rgba(0, 0, 0, .15);
+}
+
+.block_publication .book::before {
+	position: absolute;
+	content: ' ';
+	background-color: blue;
+	left: 0;
+	top: 3px;
+	width: 28px;
+	height: 194px;
+	transform: translateX(132px) rotateY(90deg);
+	background: linear-gradient(90deg, #fff 0%, #f9f9f9 5%, #fff 10%, #f9f9f9 15%, #fff 20%, #f9f9f9 25%, #fff 30%, #f9f9f9 35%, #fff 40%, #f9f9f9 45%, #fff 50%, #f9f9f9 55%, #fff 60%, #f9f9f9 65%, #fff 70%, #f9f9f9 75%, #fff 80%, #f9f9f9 85%, #fff 90%, #f9f9f9 95%, #fff 100%);
+}
+
+.block_publication:lang(ar) .book::before {
+	left: initial;
+	right: 0;
+	transform: translateX(-132px) rotateY(-90deg);
+}
+
+.block_publication .book::after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: ' ';
+	width: 150px;
+	height: 200px;
+	transform: translateZ(-15px);
+	background-color: #aaa;
+	border-radius: 0 2px 2px 0;
+}
+
+.block_publication:lang(ar) .book::after {
+	border-radius: 2px 0 0 2px;
+}
+
+.block_publication b {
+	color: #466a8c;
+	display: block;
+	text-align: center;
+	margin-bottom: 2px;
+	margin-top: 15px;
+}
+
+.block_publication:hover b {
+	color: #365f7f;
+}
+
+.block_publication span {
+	display: block;
+	width: 100%;
+	text-align: center;
+	color: #909090;
+}

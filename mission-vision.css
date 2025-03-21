@@ -1,0 +1,27 @@
+.module_mission_vision .icons-row .col-md-10 {
+	font-size: 13px;
+	text-align: justify;
+	overflow: hidden;
+}
+
+.module_mission_vision .icons-row i {
+	display: block;
+	width: 40px;
+	height: 40px;
+	background: #2a56a1;
+	color: white;
+	font-size: 18px;
+	text-align: center;
+	line-height: 40px;
+	margin: 0 0 10px 0;
+	border-radius: 50%;
+	box-shadow: 2px 2px 6px rgba(0,0,0,.1);
+}
+
+.module_mission_vision .icons-row b {
+	width: 100%;
+	font-size: 13px;
+	display: block;
+	margin-bottom: 5px;
+	color: #014993;
+}

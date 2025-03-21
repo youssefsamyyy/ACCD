@@ -1,0 +1,37 @@
+function contentSearch(page="clearing-house"){
+	var searchQuery = [];
+	$("[data-filter]").each(function(){
+		if ($(this).val()){
+			searchQuery.push($(this).attr("data-filter") + "=" + $(this).val().replace(/ /g,"+"));
+		}
+	});
+	var windowURL = page + "/" + $("#search_content").val() + "/";
+	setWindowLocation(windowURL + (searchQuery.length ? "?" + searchQuery.join("&") : ""));
+}
+
+function downloadCertificate(id){
+	$.confirm({
+		content: function(){
+			var self = this;
+			return $.ajax({
+				method: "get",
+				url: "training/certificate/?id=" + id,
+				xhr: function(){
+					var xhr = new XMLHttpRequest();
+					xhr.responseType = "blob";
+					return xhr;
+				}
+			}).done(function(response){
+				var blob = new Blob([response], { type: "image/png" });
+				var link = document.createElement("a");
+				var url = window.URL.createObjectURL(blob);
+				link.href = url;
+				link.download = "Certificate-" + $.now() + ".png";
+				link.click();
+				window.URL.revokeObjectURL(url);
+			}).always(function(){
+				self.close();
+			});
+		}
+	});
+}

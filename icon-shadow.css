@@ -1,0 +1,27 @@
+.block_icon_shadow {
+	display: block;
+	padding: 15px;
+	border-radius: 3px;
+	box-shadow: 2px 2px 6px rgba(0,0,0,.05);
+	text-align: center;
+	background: #fff;
+	transition: all 0.3s !important;
+	height: 100%;
+}
+
+.block_icon_shadow:hover {
+	box-shadow: 2px 2px 10px rgba(0,0,0,.1);
+	background: #f8f8f8;
+}
+
+.block_icon_shadow .icon {
+	display: block;
+	font-size: 30px;
+	color: #909090;
+	margin-bottom: 10px;
+}
+
+.block_icon_shadow h2 {
+	font-weight: bold;
+	font-size: 14px;
+}

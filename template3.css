@@ -1,0 +1,37 @@
+.tabs3 ul.nav {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0;
+	margin: -5px;
+	width: calc(100% + 10px);
+}
+
+.tabs3 ul.nav li {
+	float: initial;
+	margin: 5px;
+}
+
+.tabs3 ul.nav li a {
+	display: flex;
+	align-items: center;
+	background: transparent !important;
+	border-radius: 0;
+	font-size: 16px;
+	padding: 10px 5px 10px 5px;
+	color: #aaa !important;
+	border-bottom: 5px solid #eee;
+}
+
+.tabs3 ul.nav li.active a {
+	color: #095197 !important;
+	border-bottom: 5px solid #095197;
+}
+
+.tabs3 ul.nav li a i {
+	font-size: 20px;
+	margin: 0 10px 0 0;
+}
+
+.tabs3:lang(ar) ul.nav li a i {
+	margin: 0 0 0 10px;
+}

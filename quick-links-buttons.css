@@ -1,0 +1,10 @@
+.module_quick_links_buttons {
+	width: calc(100% + 10px);
+	margin: -5px;
+}
+
+.module_quick_links_buttons a {
+	margin: 5px;
+	padding: 10px 20px 10px 20px;
+	border-radius: 100px;
+}

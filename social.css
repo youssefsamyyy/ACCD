@@ -1,0 +1,29 @@
+.social_media_module {
+	width: 100%;
+	margin: 0 auto 0 auto;
+	display: flex;
+	align-items: center;
+	line-height: 1;
+}
+
+.social_media_module a {
+	width: 40px;
+	margin: 0 5px 0 0;
+	padding: 7px;
+	border-radius: 3px;
+	text-align: center;
+}
+
+.social_media_module:lang(ar) a {
+	margin: 0 0 0 5px;
+}
+
+.social_media_module a:last-child {
+	margin: 0;
+}
+
+.social_media_module a span {
+	color: white;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, .5);
+	font-size: 22px;
+}

@@ -1,0 +1,36 @@
+.module_about_links ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	list-style-position: inside;
+	-webkit-column-break-inside: avoid;
+	page-break-inside: avoid;
+	break-inside: avoid;
+}
+
+.module_about_links li a {
+	display: flex;
+	align-items: center;
+	background: rgba(255,255,255,.95);
+    border-radius: 100px;
+    margin-bottom: 15px;
+    padding-right: 15px;
+	width: 250px;
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 2.5;
+}
+
+.module_about_links li i {
+	font-size: 18px;
+	color: #007335;
+}
+
+.module_about_links:lang(en) li a {
+	padding-right: 0;
+	padding-left: 15px;
+}
+
+.module_about_links:lang(en) li i {
+	transform: rotate(180deg);
+}

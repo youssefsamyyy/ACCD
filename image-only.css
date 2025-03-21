@@ -1,0 +1,44 @@
+.block_image_only {
+	direction: ltr;
+	display: block;
+	width: 100%;
+	position: relative;
+	border-radius: 3px;
+	overflow: hidden;
+}
+
+.block_image_only .image_container {
+	width: 100%;
+	padding: 50%;
+	background-size: cover;
+	background-position: top center;
+}
+
+.block_image_only:hover div.title {
+	opacity: 1;
+}
+
+.block_image_only div.title {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background: #163451CC;
+	padding: 10px;
+	opacity: 0;
+	transition: 0.5s;
+	color: white;
+}
+
+.block_image_only div.title i {
+	font-size: 30px;
+}
+
+.block_image_only a {
+	color: white;
+}

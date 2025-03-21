@@ -1,0 +1,65 @@
+.block_generic_blurred {
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	border-radius: 5px;
+	background: white;
+	border: 1px solid #c8c8c8;
+	transition: box-shadow 0.25s !important;
+	box-shadow: 2px 2px 6px rgba(0, 0, 0, .05);
+	overflow: hidden;
+}
+
+.block_generic_blurred:hover {
+	cursor: pointer;
+	box-shadow: 2px 2px 10px rgba(0, 0, 0, .2);
+}
+
+.block_generic_blurred .header {
+	width: 100%;
+	height: 140px;
+	overflow: hidden;
+	border-bottom: 1px solid #c8c8c8;
+}
+
+.block_generic_blurred .background {
+	width: 100%;
+	height: 160px;
+	background-position: center;
+	background-size: cover;
+	-webkit-filter: blur(4px);
+	-moz-filter: blur(4px);
+	-o-filter: blur(4px);
+	-ms-filter: blur(4px);
+	filter: blur(4px);
+	transform: scale(1.25);
+}
+
+.block_generic_blurred .thumbnail {
+	width: 160px;
+	height: 160px;
+	background-position: center;
+	background-size: cover;
+	border: 0;
+	border-radius: 50%;
+	z-index: 2 !important;
+	position: absolute;
+	top: 30px;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+
+.block_generic_blurred .title {
+	font-size: 14px;
+	line-height: 1.8;
+	text-align: center;
+	padding: 60px 5px 15px 5px;
+	font-weight: bold;
+}
+
+.block_generic_blurred .info {
+	font-size: 11px;
+	padding: 5px 5px 10px 5px;
+	color: #808080;
+}

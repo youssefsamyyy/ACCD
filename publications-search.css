@@ -1,0 +1,94 @@
+/* Search Module */
+
+.module_publications_search {
+	width: 100%;
+	overflow: hidden;
+}
+
+.module_publications_search h1 {
+	color: #014a93;
+	font-size: 20px;
+}
+
+.module_publications_search h3 {
+	color: #606060;
+}
+
+.module_publications_search .search_container {
+	display: block;
+	text-align: center;
+	padding: 20px;
+	background: #fff;
+	border-radius: 5px;
+	box-shadow: 2px 2px 10px rgba(0,0,0,.5);
+	margin-top: 20px;
+}
+
+
+.module_publications_search .search_container div {
+	display: inline-block;
+	width: 25%;
+	margin: 0 5px 0 5px;
+}
+
+@media screen and (min-width:992px) {
+	.module_publications_search .search_container {
+		display: flex;
+		align-items: center;
+	}
+	
+	.module_publications_search .search_container div {
+		flex-grow: 1;
+	}
+}
+
+
+.module_publications_search .search_container div:last-child {
+	width: 100px;
+}
+
+.module_publications_search .search_container div span {
+	display: block;
+	width: 100%;
+	text-align: left;
+	color: #000;
+	margin-bottom: 5px;
+}
+
+.module_publications_search:lang(ar) .search_container div span {
+	text-align: right;
+}
+
+.module_publications_search .search_container button {
+	margin-top: 15px;
+	padding: 9px;
+}
+
+@media screen and (max-width:768px) {
+	.module_publications_search .search_container {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width:480px) {
+	.module_publications_search .search_container {
+		padding: 5px 15px 15px 15px;
+		width: 100%;
+	}
+	.module_publications_search .search_container div:last-child {
+		width: 100%;
+	}
+	.module_publications_search .search_container div {
+		display: block;
+		width: 100%;
+		margin: 10px 0 0 0;
+	}
+}
+
+.module_publications_search input,
+.module_publications_search select {
+	box-shadow: initial !important;
+	background: transparent !important;
+	border: 1px solid #ccc !important;
+	border-radius: 5px;
+}

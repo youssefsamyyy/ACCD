@@ -1,0 +1,12 @@
+.module_application_buttons {
+	display: flex;
+	width: calc(100% + 6px);
+	margin: 0 -3px 0 -3px;
+}
+
+.module_application_buttons a {
+	display: block;
+	width: 50%;
+	max-width: 180px;
+	margin: 0 3px 0 3px;
+}

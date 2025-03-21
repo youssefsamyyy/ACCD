@@ -1,0 +1,16 @@
+.module_newsletter {
+	display: flex;
+}
+
+.module_newsletter input[type=button] {
+	width: 100px;
+	margin: 0 0 0 5px;
+}
+
+.module_newsletter:lang(ar) input[type=button] {
+	margin: 0 5px 0 0;
+}
+
+.module_newsletter input[type=email] {
+	border-radius: 3px;
+}

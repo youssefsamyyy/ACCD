@@ -1,0 +1,28 @@
+.block_generic_1 .image_container {
+	width: 100%;
+	border-radius: 3px;
+	overflow: hidden;
+}
+
+.block_generic_1 .image_container .image {
+	width: 100%;
+	padding: 40%;
+	background-size: cover;
+	background-position: center center;
+	transition: 0.5s;
+}
+
+.block_generic_1:hover .image_container .image {
+	transform: scale(1.15);
+}
+
+.block_generic_1 .block_content h2 {
+	font-weight: bold;
+	font-size: 18px;
+	margin: 10px 0 5px 0;
+}
+
+.block_generic_1 .block_content small {
+	color: #606060 !important;
+	font-size: 12px;
+}

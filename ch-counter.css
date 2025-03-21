@@ -1,0 +1,43 @@
+.module_ch_counter {
+	width: 100%;
+	text-align: center;
+	color: #606060;
+	overflow: hidden;
+}
+
+.module_ch_counter .counter_block i {
+	/* Icon */
+	font-size: 35px;
+	color: #fff;
+	background: #014993;
+	border-radius: 50%;
+	width: 70px;
+	height: 70px;
+	margin: 0 auto 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 2px 2px 6px rgba(0,0,0,.1);
+}
+
+.module_ch_counter .counter_block span {
+	/* Title */
+	display: block;
+	width: 100%;
+	font-size: 14px;
+	margin: 10px auto 15px auto;
+}
+
+.module_ch_counter .counter_block div {
+	/* Number */
+	font-size: 30px;
+	font-weight: bold;
+	direction: ltr;
+	color: #014a93;
+}
+
+@media screen and (max-width: 992px){
+	.module_ch_counter .row.single.grid-container-15 {
+		padding-bottom: 0 !important;
+	}
+}

@@ -1,0 +1,28 @@
+.module_scopes_links {
+	text-align: center;
+}
+
+.module_scopes_links a {
+	color: #fff;
+}
+
+.module_scopes_links a i {
+	font-size: 50px;
+	display: block;
+	margin-bottom: 15px;
+	text-shadow: 1px 1px 6px rgba(0,0,0,.1);
+	transition: transform 0.3s !important;
+	
+}
+
+.module_scopes_links a span {
+	font-size: 16px;
+	font-weight: bold;
+	text-shadow: 1px 1px 6px rgba(0,0,0,.1);
+	transition: transform 0.3s !important;
+}
+
+.module_scopes_links a:hover i,
+.module_scopes_links a:hover span {
+	transform: scale(1.2);
+}
